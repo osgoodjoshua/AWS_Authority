@@ -7,11 +7,11 @@ from dotenv import load_dotenv
 # Load environment variables
 load_dotenv()
 
-AUTH0_DOMAIN = os.getenv("AUTH0_DOMAIN")
-AUTH0_CLIENT_ID = os.getenv("AUTH0_CLIENT_ID")
-AUTH0_CLIENT_SECRET = os.getenv("AUTH0_CLIENT_SECRET")
-AUTH0_CALLBACK_URL = os.getenv("AUTH0_CALLBACK_URL")
-AUTH0_LOGOUT_URL = os.getenv("AUTH0_LOGOUT_URL")
+AUTH0_DOMAIN = st.secrets["AUTH0_DOMAIN"]
+AUTH0_CLIENT_ID = st.secrets["AUTH0_CLIENT_ID"]
+AUTH0_CLIENT_SECRET = st.secrets["AUTH0_CLIENT_SECRET"]
+AUTH0_CALLBACK_URL = st.secrets["AUTH0_CALLBACK_URL"]
+AUTH0_LOGOUT_URL = st.secrets["AUTH0_LOGOUT_URL"]
 
 def login():
     # Generate Auth0 login URL
